@@ -2,14 +2,23 @@ package beanPod;
 
 public class CourseBean {
 	
-	private String Course;
+	private String courseID;
+	private String subjectID;
 
-	public String getCourse() {
-		return Course;
+	public String getCourseID() {
+		return courseID;
 	}
 
-	public void setCourse(String course) {
-		this.Course = course;
+	public void setCourseID(String courseID) {
+		this.courseID = courseID;
+	}
+
+	public String getSubjectID() {
+		return subjectID;
+	}
+
+	public void setSubjectID(String subjectID) {
+		this.subjectID = subjectID;
 	}
 	
 	
