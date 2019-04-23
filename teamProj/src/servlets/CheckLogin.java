@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
-
+@WebServlet("CheckLogin")
 public class CheckLogin extends HttpServlet {
 	
 	@Override
@@ -18,10 +18,12 @@ public class CheckLogin extends HttpServlet {
 		
 		boolean isInvalid = false;
 		
-		if( studID = "" || studID == null){
+		if(studId == "" || studId == null ){
 			nullId = "Please Enter A Valid Student ID";
 			isInvalid = true;
 		}
+		
+	
 	}
 
 }

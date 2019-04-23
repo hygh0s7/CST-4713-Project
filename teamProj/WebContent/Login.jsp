@@ -9,7 +9,7 @@
 <body>
 <h1 align="center">Please Sign In</h1>
 
-<form>
+<form action="CheckLogin">
 	<fieldset align="center">
 		<legend>Login In</legend>
 		Student ID: <input type="text" name="StudentId" />

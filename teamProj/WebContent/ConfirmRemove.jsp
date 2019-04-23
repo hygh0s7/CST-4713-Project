@@ -8,10 +8,12 @@
 </head>
 <body>
 
+<h1 align="center">Removing:</h1>
+
 <form>
 
 <center>
-<h1>Removing:</h1>
+
 <br />
 <br />
 <br />
