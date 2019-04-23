@@ -12,14 +12,7 @@ import beanPod.CourseBean;
 @WebServlet("/CheckLogin")
 public class CheckLogin extends HttpServlet {
 	
-	public static class Student{
-		private String ssn = "";
-		private ArrayList<CourseBean> enrolledCourses = new ArrayList<>();
-		
-		
-	}
-	
-	
+
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
