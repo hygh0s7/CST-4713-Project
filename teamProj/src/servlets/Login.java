@@ -15,7 +15,6 @@ public class Login {
 		String query = "select * from Enrollment";
 		DBConnection db = new DBConnection();
 		Connection conn = db.establishDBConnection();
-		Statement useStatement = conn.createStatement();
 		
 		Statement selectStatement = conn.createStatement();
 		ResultSet rs = selectStatement.executeQuery(query);
