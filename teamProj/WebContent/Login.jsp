@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Student Log In</title>
 </head>
 <body>
 <h1 align="center">Please Sign In</h1>
