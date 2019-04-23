@@ -4,9 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Confirm Removal</title>
 </head>
 <body>
+
+<form>
+
+<center>
+<h1>Removing:</h1>
+<br />
+<br />
+<br />
+
+<input type="button" value="YES" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="NO">
+
+</center>
+</form>
 
 </body>
 </html>
