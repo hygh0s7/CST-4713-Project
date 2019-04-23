@@ -1,12 +1,24 @@
 package servlets;
 
 import java.io.*;
+import java.util.ArrayList;
+
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
+import beanPod.CourseBean;
+
 @WebServlet("/CheckLogin")
 public class CheckLogin extends HttpServlet {
+	
+	public static class Student{
+		private String ssn = "";
+		private ArrayList<CourseBean> enrolledCourses = new ArrayList<>();
+		
+		
+	}
+	
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -22,6 +34,9 @@ public class CheckLogin extends HttpServlet {
 		if(studId == "" || studId == null ){
 			nullId = "Please Enter A Valid Student ID";
 			isInvalid = true;
+		}
+		else{
+			
 		}
 		
 	
