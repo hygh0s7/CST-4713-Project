@@ -12,7 +12,7 @@
 <form>
 	<fieldset align="center">
 		<legend>Login In</legend>
-		Student ID: <input type="text" name=StudentId />
+		Student ID: <input type="text" name="StudentId" />
 	</fieldset>
 	
 	<center>
