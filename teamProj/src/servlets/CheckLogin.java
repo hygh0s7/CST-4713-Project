@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
-@WebServlet("CheckLogin")
+@WebServlet("/CheckLogin")
 public class CheckLogin extends HttpServlet {
 	
 	@Override
