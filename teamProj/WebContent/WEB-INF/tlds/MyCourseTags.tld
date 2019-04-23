@@ -12,7 +12,7 @@
   
   <tag>
     <description>A random number between 0 and 100</description>
-    <name>MyRandomNumber</name>
+    <name>MyCourseTags</name>
     <tag-class>testPackage.MyNumber</tag-class>
     <body-content>empty</body-content>
   </tag>     
