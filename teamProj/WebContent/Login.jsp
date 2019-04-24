@@ -7,6 +7,19 @@
 <title>Student Log In</title>
 </head>
 <body>
+
+<%
+String studId = request.getParameter("StudentId");
+String nullId = "";
+
+boolean isInvalid = false;
+
+if(studId == "" || studId == null ){
+	nullId = "Please Enter A Valid Student ID";
+	isInvalid = true;
+}
+%>
+
 <h1 align="center">Please Sign In</h1>
 
 <form action="CheckLogin">

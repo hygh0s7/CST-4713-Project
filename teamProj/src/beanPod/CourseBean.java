@@ -4,6 +4,7 @@ public class CourseBean {
 	
 	private String courseID;
 	private String subjectID;
+	private int numberOfCredits;
 
 	public String getCourseID() {
 		return courseID;
@@ -20,6 +21,15 @@ public class CourseBean {
 	public void setSubjectID(String subjectID) {
 		this.subjectID = subjectID;
 	}
+
+	public int getNumberOfCredits() {
+		return numberOfCredits;
+	}
+
+	public void setNumberOfCredits(int numberOfCredits) {
+		this.numberOfCredits = numberOfCredits;
+	}
+	
 	
 	
 
