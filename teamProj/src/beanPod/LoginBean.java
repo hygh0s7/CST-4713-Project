@@ -3,14 +3,14 @@ package beanPod;
 import java.util.ArrayList;
 
 public class LoginBean {
-	private int studentID;
+	private String studentID;
 	private ArrayList<CourseBean> enrolledCourses = new ArrayList<>();
 
-	public int getStudentID() {
+	public String getStudentID() {
 		return studentID;
 	}
 
-	public void setStudentID(int studentID) {
+	public void setStudentID(String studentID) {
 		this.studentID = studentID;
 	}
 

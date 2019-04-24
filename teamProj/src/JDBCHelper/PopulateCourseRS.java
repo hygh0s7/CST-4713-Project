@@ -40,22 +40,15 @@ public class PopulateCourseRS {
 		
 		return ResultHash;
 	}
-	
-	
-	
-	@Override
-	public String toString() {
-		return "PopulateCourseRS [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-				+ super.toString() + "]";
-	}
-
-
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Hashtable answer = PopulateTable();
 		Set<String> keys = answer.keySet();
 		for(String key: keys){ 
-			System.out.println("Value of " + key + " is: " + ((CourseBean) answer.get(key)).getSubjectID());
+			System.out.println("Value of " + key + " is: " + 
+					((CourseBean) answer.get(key)).getSubjectID() + 
+					" and # of credits is " +
+					((CourseBean) answer.get(key)).getNumberOfCredits());
 		}
 	}
 
