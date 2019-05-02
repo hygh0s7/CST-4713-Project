@@ -28,42 +28,42 @@ public class CheckLogin extends HttpServlet {
 		String nullId = "";
 		
 		Hashtable<String, LoginBean> enrollmentLog = new Hashtable<>();
-		boolean isInvalid = false;
+//		boolean isInvalid = false;
+//		
+//		String query = "select * from Enrollment";
+//		DBConnection db = new DBConnection();
+//		Connection conn = db.establishDBConnection();
+//		
+//		Statement selectStatement = conn.createStatement();
+//		ResultSet rs = selectStatement.executeQuery(query);
+//		
+//		String query = "select * from Enrollment";
+//		DBConnection db = new DBConnection();
+//		Connection conn = db.establishDBConnection();
+//		
+//		Statement selectStatement = conn.createStatement();
+//		ResultSet rs = selectStatement.executeQuery(query);
+//		
 		
-		String query = "select * from Enrollment";
-		DBConnection db = new DBConnection();
-		Connection conn = db.establishDBConnection();
 		
-		Statement selectStatement = conn.createStatement();
-		ResultSet rs = selectStatement.executeQuery(query);
-		
-		String query = "select * from Enrollment";
-		DBConnection db = new DBConnection();
-		Connection conn = db.establishDBConnection();
-		
-		Statement selectStatement = conn.createStatement();
-		ResultSet rs = selectStatement.executeQuery(query);
-		
-		
-		
-		while(rs.next()){
-			if(rs.getString("ssn").equals(studId)){
-				if(enrollmentLog.containsKey(studId)){
-					enrollmentLog.get(studId).getEnrolledCourses().add(rs.getString("courseId"));
-				}
-				
-			}
-		}
-		
-
-		
-		if(studId == "" || studId == null ){
-			nullId = "Please Enter A Valid Student ID";
-			isInvalid = true;
-		}
-		else if(){
+//		while(rs.next()){
+//			if(rs.getString("ssn").equals(studId)){
+//				if(enrollmentLog.containsKey(studId)){
+//					enrollmentLog.get(studId).getEnrolledCourses().add(rs.getString("courseId"));
+//				}
+//				
+//			}
+//		}
+//		
+//
+//		
+//		if(studId == "" || studId == null ){
+//			nullId = "Please Enter A Valid Student ID";
+//			isInvalid = true;
+//		}
+		//else if(){
 			
-		}
+		
 		
 	
 	}
