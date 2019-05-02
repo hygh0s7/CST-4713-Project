@@ -3,6 +3,7 @@ package servlets;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -12,6 +13,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 import JDBCHelper.DBConnection;
+import JDBCHelper.PopulateCourseRS;
 import beanPod.CourseBean;
 import beanPod.LoginBean;
 
@@ -27,7 +29,15 @@ public class CheckLogin extends HttpServlet {
 		String studId = request.getParameter("StudentId");
 		String nullId = "";
 		
-		Hashtable<String, LoginBean> enrollmentLog = new Hashtable<>();
+		try {
+			Hashtable<String, CourseBean> enrollmentLog = PopulateCourseRS.populateCourses();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		boolean isInvalid = false;
 //		
 //		String query = "select * from Enrollment";

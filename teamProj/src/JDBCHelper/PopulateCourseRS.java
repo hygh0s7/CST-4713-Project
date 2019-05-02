@@ -8,11 +8,11 @@ import java.util.Hashtable;
 import beanPod.CourseBean;
 
 public class PopulateCourseRS {
-	public Hashtable<String, CourseBean> populateCourses() throws ClassNotFoundException, SQLException{
+	public static Hashtable<String, CourseBean> populateCourses() throws ClassNotFoundException, SQLException{
 		Hashtable<String, CourseBean> answer = new Hashtable<>();
 		boolean isInvalid = false;
 		
-		String query = "select * from Enrollment";
+		String query = "select * from Course";
 		DBConnection db = new DBConnection();
 		Connection conn = db.establishDBConnection();
 		
