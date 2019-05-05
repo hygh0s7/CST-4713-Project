@@ -16,7 +16,7 @@
 	</fieldset>
 	
 	<center>
-		<input type="button" value="Log In" />
+		<input type="submit" value="Log In" />
 	</center> 
 </form>
 

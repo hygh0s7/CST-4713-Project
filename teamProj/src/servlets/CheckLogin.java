@@ -13,7 +13,6 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 import JDBCHelper.DBConnection;
-import JDBCHelper.PopulateCourseRS;
 import beanPod.CourseBean;
 import beanPod.LoginBean;
 
@@ -21,6 +20,9 @@ import beanPod.LoginBean;
 public class CheckLogin extends HttpServlet {
 	
 
+
+	public Hashtable<String, CourseBean> enrollmentLog = new Hashtable();
+	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
@@ -28,9 +30,12 @@ public class CheckLogin extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String studId = request.getParameter("StudentId");
 		String nullId = "";
+
 		
 		try {
-			Hashtable<String, CourseBean> enrollmentLog = PopulateCourseRS.populateCourses();
+
+			DBConnection db = new DBConnection();
+			enrollmentLog = db.populateCourses();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,40 +43,9 @@ public class CheckLogin extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		boolean isInvalid = false;
-//		
-//		String query = "select * from Enrollment";
-//		DBConnection db = new DBConnection();
-//		Connection conn = db.establishDBConnection();
-//		
-//		Statement selectStatement = conn.createStatement();
-//		ResultSet rs = selectStatement.executeQuery(query);
-//		
-//		String query = "select * from Enrollment";
-//		DBConnection db = new DBConnection();
-//		Connection conn = db.establishDBConnection();
-//		
-//		Statement selectStatement = conn.createStatement();
-//		ResultSet rs = selectStatement.executeQuery(query);
-//		
 		
-		
-//		while(rs.next()){
-//			if(rs.getString("ssn").equals(studId)){
-//				if(enrollmentLog.containsKey(studId)){
-//					enrollmentLog.get(studId).getEnrolledCourses().add(rs.getString("courseId"));
-//				}
-//				
-//			}
-//		}
-//		
-//
-//		
-//		if(studId == "" || studId == null ){
-//			nullId = "Please Enter A Valid Student ID";
-//			isInvalid = true;
-//		}
-		//else if(){
+	
+		out.print(enrollmentLog.size());
 			
 		
 		
